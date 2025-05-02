@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Login_Suite" class="navigator-link ">
-                    <span>C:\Users\Appala Naidu\eclipse-workspace\FamilyProHealth\testng.xml</span>
+                    <span>C:\Users\Appala Naidu\git\repository3\FamilyProHealth\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,6 +101,11 @@
                       <a href="#" panel-name="suite-Login_Suite" class="show-methods passed suite-Login_Suite"> (show)</a> <!-- show-methods passed suite-Login_Suite -->
                     </span>
                     <div class="method-list-content passed suite-Login_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Login_Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testFreeSubscription(dev)">testFreeSubscription(dev)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Login_Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testValidLogin(dev)">testValidLogin(dev)</a> <!-- method navigator-link -->
@@ -126,6 +131,14 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="testFreeSubscription(dev)">
+                  </a> <!-- testFreeSubscription(dev) -->
+                  <span class="method-name">testFreeSubscription</span>
+                  <span class="parameters">(dev)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="testValidLogin(dev)">
                   </a> <!-- testValidLogin(dev) -->
                   <span class="method-name">testValidLogin</span>
@@ -137,7 +150,7 @@
         </div> <!-- panel Login_Suite -->
         <div panel-name="test-xml-Login_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Appala Naidu\eclipse-workspace\FamilyProHealth\testng.xml</span>
+            <span class="header-content">C:\Users\Appala Naidu\git\repository3\FamilyProHealth\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -187,16 +200,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testValidLogin')
+data.setCell(0, 1, 'testFreeSubscription')
 data.setCell(0, 2, 'tests.LoginTest')
-data.setCell(0, 3, 1577);
+data.setCell(0, 3, 4071);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testValidLogin')
+data.setCell(1, 2, 'tests.LoginTest')
+data.setCell(1, 3, 1132);
 window.suiteTableData['Login_Suite']= { tableData: data, tableDiv: 'times-div-Login_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Login_Suite">
               </div> <!-- times-div-Login_Suite -->
             </div> <!-- times-div -->
@@ -229,19 +246,31 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(dev)</span>
-                <span class="method-start">266 ms</span>
+                <span class="method-start">194 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testFreeSubscription(dev)</span>
+                <span class="method-start">3096 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=testFreeSubscription status=SUCCESS method=LoginTest.testFreeSubscription(java.lang...)</span>
+                <span class="method-start">7170 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(dev)</span>
+                <span class="method-start">7392 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testValidLogin(dev)</span>
-                <span class="method-start">4452 ms</span>
+                <span class="method-start">9725 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testValidLogin status=SUCCESS method=LoginTest.testValidLogin(java.lang.String)[pri...)</span>
-                <span class="method-start">6036 ms</span>
+                <span class="method-start">10860 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">endTest</span>
-                <span class="method-start">6296 ms</span>
+                <span class="method-start">11030 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

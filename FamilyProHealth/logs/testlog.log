@@ -2,3 +2,20 @@
 2025-05-02 14:37:20,036 INFO pages.CreateFreeAccountPage [main] User is on Dashboard Page 
 2025-05-02 14:38:59,686 INFO tests.LoginTest [main] Starting login test in environment: dev
 2025-05-02 14:39:01,247 INFO pages.CreateFreeAccountPage [main] User is on Dashboard Page 
+2025-05-02 15:20:58,632 INFO tests.LoginTest [main] Starting login test in environment: dev
+2025-05-02 15:21:00,267 INFO pages.CreateFreeAccountPage [main] User is on Dashboard Page 
+2025-05-02 15:22:08,373 INFO tests.LoginTest [main] Starting login test in environment: dev
+2025-05-02 15:22:08,653 INFO pages.CreateFreeAccountPage [main] Starting account creation process.
+2025-05-02 15:22:08,771 INFO pages.CreateFreeAccountPage [main] Entered Full Name: QvRnPNFRbn
+2025-05-02 15:22:08,963 INFO pages.CreateFreeAccountPage [main] Selected Country Code: 91
+2025-05-02 15:22:09,130 INFO pages.CreateFreeAccountPage [main] Entered Mobile Number: 9417726338
+2025-05-02 15:22:09,249 INFO pages.CreateFreeAccountPage [main] Entered Email: zccxdk@yopmail.com
+2025-05-02 15:22:09,343 INFO pages.CreateFreeAccountPage [main] Entered Password.
+2025-05-02 15:22:09,429 INFO pages.CreateFreeAccountPage [main] Re-entered Password.
+2025-05-02 15:22:09,575 INFO pages.CreateFreeAccountPage [main] Agreed to Terms and Conditions.
+2025-05-02 15:22:09,682 INFO pages.CreateFreeAccountPage [main] Clicked on 'Create Free Account' button.
+2025-05-02 15:22:09,682 INFO pages.CreateFreeAccountPage [main] Finished account creation process.
+2025-05-02 15:22:12,392 INFO pages.CreateFreeAccountPage [main] User Clicked Ok button on Success Popup
+2025-05-02 15:22:12,433 INFO pages.CreateFreeAccountPage [main] User is on Dashboard Page 
+2025-05-02 15:22:14,994 INFO tests.LoginTest [main] Starting login test in environment: dev
+2025-05-02 15:22:16,124 INFO pages.CreateFreeAccountPage [main] User is on Dashboard Page 
