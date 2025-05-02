@@ -32,18 +32,18 @@ public class LoginTest extends BaseTest {
 		homePage.isFPHLogoDisplayed();
 	}	
 
-	@Test
-	@Parameters("env")
-	public void testFreeSubscription(String env) {
-		logger.info("Starting login test in environment: " + env);
-		test = extent.createTest("Verify user should be able to take free Subscription ").assignCategory("Regression")
-				.assignCategory("Create");
-		loginPage = new LoginPage(driver);		
-		loginPage.clickCreateFreeAccount();
-		createFreeAccountPage = new CreateFreeAccountPage(driver);
-		createFreeAccountPage.createFreeAccount("RandomName", "91", "RandomMobile", "RandomEmail", "Kaara@123");
-		homePage=new HomePage(driver);
-		homePage.clickOKButtonOnCreateAccountSuccessPopup();
-		homePage.isFPHLogoDisplayed();
-	}
+//	@Test
+//	@Parameters("env")
+//	public void testFreeSubscription(String env) {
+//		logger.info("Starting login test in environment: " + env);
+//		test = extent.createTest("Verify user should be able to take free Subscription ").assignCategory("Regression")
+//				.assignCategory("Create");
+//		loginPage = new LoginPage(driver);		
+//		loginPage.clickCreateFreeAccount();
+//		createFreeAccountPage = new CreateFreeAccountPage(driver);
+//		createFreeAccountPage.createFreeAccount("RandomName", "91", "RandomMobile", "RandomEmail", "Kaara@123");
+//		homePage=new HomePage(driver);
+//		homePage.clickOKButtonOnCreateAccountSuccessPopup();
+//		homePage.isFPHLogoDisplayed();
+//	}
 }

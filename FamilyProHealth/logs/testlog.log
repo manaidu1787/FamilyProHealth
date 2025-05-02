@@ -19,3 +19,20 @@
 2025-05-02 15:22:12,433 INFO pages.CreateFreeAccountPage [main] User is on Dashboard Page 
 2025-05-02 15:22:14,994 INFO tests.LoginTest [main] Starting login test in environment: dev
 2025-05-02 15:22:16,124 INFO pages.CreateFreeAccountPage [main] User is on Dashboard Page 
+2025-05-02 16:25:33,661 INFO tests.LoginTest [main] Starting login test in environment: dev
+2025-05-02 16:25:33,990 INFO pages.CreateFreeAccountPage [main] Starting account creation process.
+2025-05-02 16:25:34,146 INFO pages.CreateFreeAccountPage [main] Entered Full Name: dXVOJvfVHE
+2025-05-02 16:25:34,356 INFO pages.CreateFreeAccountPage [main] Selected Country Code: 91
+2025-05-02 16:25:34,555 INFO pages.CreateFreeAccountPage [main] Entered Mobile Number: 9078099058
+2025-05-02 16:25:34,694 INFO pages.CreateFreeAccountPage [main] Entered Email: lucbqx@yopmail.com
+2025-05-02 16:25:34,806 INFO pages.CreateFreeAccountPage [main] Entered Password.
+2025-05-02 16:25:34,917 INFO pages.CreateFreeAccountPage [main] Re-entered Password.
+2025-05-02 16:25:35,124 INFO pages.CreateFreeAccountPage [main] Agreed to Terms and Conditions.
+2025-05-02 16:25:35,235 INFO pages.CreateFreeAccountPage [main] Clicked on 'Create Free Account' button.
+2025-05-02 16:25:35,235 INFO pages.CreateFreeAccountPage [main] Finished account creation process.
+2025-05-02 16:25:38,176 INFO pages.CreateFreeAccountPage [main] User Clicked Ok button on Success Popup
+2025-05-02 16:25:38,213 INFO pages.CreateFreeAccountPage [main] User is on Dashboard Page 
+2025-05-02 16:25:40,999 INFO tests.LoginTest [main] Starting login test in environment: dev
+2025-05-02 16:25:42,134 INFO pages.CreateFreeAccountPage [main] User is on Dashboard Page 
+2025-05-02 17:23:54,668 INFO tests.LoginTest [main] Starting login test in environment: dev
+2025-05-02 17:23:55,882 INFO pages.CreateFreeAccountPage [main] User is on Dashboard Page 
