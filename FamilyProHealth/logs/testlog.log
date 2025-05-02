@@ -1,0 +1,4 @@
+2025-05-02 14:37:18,320 INFO tests.LoginTest [main] Starting login test in environment: dev
+2025-05-02 14:37:20,036 INFO pages.CreateFreeAccountPage [main] User is on Dashboard Page 
+2025-05-02 14:38:59,686 INFO tests.LoginTest [main] Starting login test in environment: dev
+2025-05-02 14:39:01,247 INFO pages.CreateFreeAccountPage [main] User is on Dashboard Page 

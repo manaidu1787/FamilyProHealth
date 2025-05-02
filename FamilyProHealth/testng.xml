@@ -1,0 +1,8 @@
+<suite name="Login Suite">
+    <parameter name="env" value="dev"/>
+    <test name="Login Tests">
+        <classes>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+</suite>
