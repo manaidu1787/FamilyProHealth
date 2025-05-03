@@ -5,6 +5,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import base.BaseTest;
+import utils.PropertyUtils;
 import utils.RandomDataGenerator;
 
 import org.apache.logging.log4j.LogManager;
@@ -64,13 +65,14 @@ public class CreateFreeAccountPage extends BaseTest {
         }
     }
 
-    public void enterMobileNumber(String mobile) {
+    public void enterMobileNumber(String env, String mobile) {
     	if(mobile.equals("RandomMobile"))
     	{
     		mobile=RandomDataGenerator.generateRandomMobile();
     	}
     	
         try {
+        	PropertyUtils.writeOrUpdateProperty(env, "userName", mobile);
             wait.until(ExpectedConditions.visibilityOfElementLocated(mobileNumber)).sendKeys(mobile);
             logger.info("Entered Mobile Number: " + mobile);
             test.pass("Mobile Number entered: " + mobile);
@@ -143,11 +145,11 @@ public class CreateFreeAccountPage extends BaseTest {
         }
     }
 
-    public void createFreeAccount(String name, String code, String mobile, String emailVal, String pwd) {
+    public void createFreeAccount(String env, String name, String code, String mobile, String emailVal, String pwd) {
         logger.info("Starting account creation process.");
         enterFullName(name);
         selectCountryCode(code);
-        enterMobileNumber(mobile);
+        enterMobileNumber(env, mobile);
         enterEmail(emailVal);
         enterPassword(pwd);
         retypePassword(pwd);
