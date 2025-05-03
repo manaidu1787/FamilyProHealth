@@ -19,7 +19,7 @@ public class LoginTest extends BaseTest {
 	public HomePage homePage;
 	public CreateFreeAccountPage createFreeAccountPage;
 	
-	@Test(priority=1) 
+	@Test(priority=2) 
 	@Parameters("env")
 	public void testValidLogin(String env) {
 		logger.info("Starting login test in environment: " + env);
@@ -33,7 +33,7 @@ public class LoginTest extends BaseTest {
 		homePage.isFPHLogoDisplayed();
 	}	
 
-	@Test(priority=2) @Ignore
+	@Test(priority=1) 
 	@Parameters("env")
 	public void testFreeSubscription(String env) {
 		logger.info("Starting login test in environment: " + env);
@@ -42,7 +42,7 @@ public class LoginTest extends BaseTest {
 		loginPage = new LoginPage(driver);		
 		loginPage.clickCreateFreeAccount();
 		createFreeAccountPage = new CreateFreeAccountPage(driver);
-		createFreeAccountPage.createFreeAccount("RandomName", "91", "RandomMobile", "RandomEmail", "Kaara@123");
+		createFreeAccountPage.createFreeAccount(env, "RandomName", "91", "RandomMobile", "RandomEmail", "Kaara@123");
 		homePage=new HomePage(driver);
 		homePage.clickOKButtonOnCreateAccountSuccessPopup();
 		homePage.isFPHLogoDisplayed();
