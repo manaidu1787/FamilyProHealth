@@ -7,7 +7,7 @@ import java.util.Properties;
 public class ConfigReader {
     private static Properties properties = new Properties();
 
-    public static void loadProperties(String env) {
+    public static void loadProperties(String env) {    	
         try (FileInputStream fis = new FileInputStream("src/test/resources/config/" + env + ".properties")) {
             properties.load(fis);
         } catch (IOException e) {

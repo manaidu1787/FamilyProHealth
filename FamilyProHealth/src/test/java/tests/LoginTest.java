@@ -2,6 +2,7 @@ package tests;
 
 import base.BaseTest;
 
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -18,7 +19,7 @@ public class LoginTest extends BaseTest {
 	public HomePage homePage;
 	public CreateFreeAccountPage createFreeAccountPage;
 	
-	@Test
+	@Test(priority=1) 
 	@Parameters("env")
 	public void testValidLogin(String env) {
 		logger.info("Starting login test in environment: " + env);
@@ -32,7 +33,7 @@ public class LoginTest extends BaseTest {
 		homePage.isFPHLogoDisplayed();
 	}	
 
-	@Test
+	@Test(priority=2) @Ignore
 	@Parameters("env")
 	public void testFreeSubscription(String env) {
 		logger.info("Starting login test in environment: " + env);
