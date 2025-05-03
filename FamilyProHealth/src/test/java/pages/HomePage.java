@@ -15,7 +15,7 @@ public class HomePage extends BaseTest {
 	private By famhealthLogo = By.xpath("//img[@class='logowithText']");
 	private By signOutButton = By.xpath("//span[contains(text(), 'Sign Out')]");
 	private By createAccountSuccessPopupOKButton = By.xpath("//span[text()='OK']");
-	private static final Logger logger = LogManager.getLogger(CreateFreeAccountPage.class);
+	private static final Logger logger = LogManager.getLogger(HomePage.class);
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -23,7 +23,6 @@ public class HomePage extends BaseTest {
 	}
 
 	public void isFPHLogoDisplayed() {
-
 		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(famhealthLogo)).isDisplayed();
 			logger.info("User is on Dashboard Page ");
