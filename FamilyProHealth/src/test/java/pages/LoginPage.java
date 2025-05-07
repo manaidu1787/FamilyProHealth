@@ -9,10 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
-import base.BaseClass;
 import base.BaseTest;
-
 import java.time.Duration;
 import java.util.Properties;
 
