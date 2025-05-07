@@ -66,7 +66,7 @@ public class CreateFreeAccountPage extends BaseTest {
     }
 
     public void enterMobileNumber(String env, String mobile) {
-    	if(mobile.equals("RandomMobile"))
+    	if(mobile.equals("RandomMobile")||!mobile.matches("[0-9]{10}"))
     	{
     		mobile=RandomDataGenerator.generateRandomMobile();
     	}
