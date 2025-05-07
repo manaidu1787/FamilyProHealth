@@ -41,8 +41,7 @@ public class SanityTest extends BaseTest {
 	@Parameters("env")
 	public void testFreeSubscription(String env) {
 		logger.info("Starting login test in environment: " + env);
-		test = extent.createTest("Verify user should be able to take free Subscription ").assignCategory("Regression")
-				.assignCategory("Create");
+		test = extent.createTest("Verify user should be able to take free Subscription ").assignCategory("Create");
 		loginPage = new LoginPage(driver);		
 		loginPage.clickCreateFreeAccount();
 		createFreeAccountPage = new CreateFreeAccountPage(driver);
@@ -56,8 +55,7 @@ public class SanityTest extends BaseTest {
 	@Parameters("env")
 	public void testAddNewBeneficiary(String env) {
 		logger.info("Starting login test in environment: " + env);
-		test = extent.createTest("Verify user should be able to add a New Beneficiary ").assignCategory("Regression")
-				.assignCategory("Create");		
+		test = extent.createTest("Verify user should be able to add a New Beneficiary ").assignCategory("Create");		
 		loginPage = new LoginPage(driver);
 		String username = ConfigReader.get("userName");
 		String password = ConfigReader.get("password");
@@ -73,8 +71,7 @@ public class SanityTest extends BaseTest {
 	@Parameters("env")
 	public void testAddNewFamilyMember(String env) {
 		logger.info("Starting login test in environment: " + env);
-		test = extent.createTest("Verify user should be able to add a New Family Member ").assignCategory("Regression")
-				.assignCategory("Create");		
+		test = extent.createTest("Verify user should be able to add a New Family Member ").assignCategory("Create");		
 		loginPage = new LoginPage(driver);
 		String username = ConfigReader.get("userName");
 		String password = ConfigReader.get("password");
