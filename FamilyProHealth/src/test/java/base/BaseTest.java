@@ -38,7 +38,8 @@ public class BaseTest {
 	public static ExtentTest test;
 
 	@BeforeTest
-	public void StartTest() {
+	@Parameters("env")
+	public void StartTest(String env) {
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		String reportName = "FPH-Test-Report-" + timeStamp + ".html";
 		String reportPath = System.getProperty("user.dir") + "/src/test/resources/reports/" + reportName;
@@ -47,7 +48,7 @@ public class BaseTest {
 			spark = new ExtentSparkReporter(reportPath);
 			spark.config().setTheme(Theme.STANDARD);
 			spark.config().setDocumentTitle("FPH Automation Report");
-			spark.config().setReportName("FPH DEV Environment Automation Test Report");
+			spark.config().setReportName("FPH "+env+" Environment Automation Test Report");
 			extent.attachReporter(spark);
 
 		}
