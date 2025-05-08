@@ -22,64 +22,69 @@ public class SanityTest extends BaseTest {
 	public CreateFreeAccountPage createFreeAccountPage;
 	public AddNewBeneficiaryPage addNewBeneficiaryPage;
 	public AddNewFamilyMemberPage addNewFamilyMemberPage;
-	
-	@Test(priority=2) 
+
+	@Test(priority = 2)
 	@Parameters("env")
-	public void testValidLogin(String env) {
+	public void testValidLoginAndLogOut(String env) {
 		logger.info("Starting login test in environment: " + env);
-		test = extent.createTest("Verify the subscribed user should be able to login successfully").assignCategory("Regression")
-				.assignCategory("Login");
+		test = extent.createTest("Verify the subscribed user should be able to login and logout successfully")
+				.assignCategory("Regression").assignCategory("Login");
 		loginPage = new LoginPage(driver);
 		String username = ConfigReader.get("userName");
 		String password = ConfigReader.get("password");
 		loginPage.login(username, password);
-		homePage=new HomePage(driver);
+		homePage = new HomePage(driver);
 		homePage.isFPHLogoDisplayed();
-	}	
+		homePage.clickSignOutButton();
+	}
 
-	@Test(priority=1) 
+	@Test(priority = 1)
 	@Parameters("env")
 	public void testFreeSubscription(String env) {
 		logger.info("Starting login test in environment: " + env);
 		test = extent.createTest("Verify user should be able to take free Subscription ").assignCategory("Create");
-		loginPage = new LoginPage(driver);		
+		loginPage = new LoginPage(driver);
 		loginPage.clickCreateFreeAccount();
 		createFreeAccountPage = new CreateFreeAccountPage(driver);
 		createFreeAccountPage.createFreeAccount(env, "RandomName", "91", "RandomMobile", "RandomEmail", "Kaara@123");
-		homePage=new HomePage(driver);
+		homePage = new HomePage(driver);
 		homePage.clickOKButtonOnCreateAccountSuccessPopup();
 		homePage.isFPHLogoDisplayed();
+		homePage.clickSignOutButton();
 	}
-	
-	@Test(priority=3) 
+
+	@Test(priority = 3)
 	@Parameters("env")
 	public void testAddNewBeneficiary(String env) {
 		logger.info("Starting login test in environment: " + env);
-		test = extent.createTest("Verify user should be able to add a New Beneficiary ").assignCategory("Create");		
+		test = extent.createTest("Verify user should be able to add a New Beneficiary ").assignCategory("Create");
 		loginPage = new LoginPage(driver);
 		String username = ConfigReader.get("userName");
 		String password = ConfigReader.get("password");
 		loginPage.login(username, password);
-		homePage=new HomePage(driver);	
+		homePage = new HomePage(driver);
 		homePage.clickAddNewBeneficiaryButton();
 		addNewBeneficiaryPage = new AddNewBeneficiaryPage(driver);
 		addNewBeneficiaryPage.addNewBeneficiary("RandomName", "91", "RandomMobile", "Male");
 		homePage.isBeneficiaryAddedSuccessMessageDisplayed();
+		homePage.clickSignOutButton();
 	}
-	
-	@Test(priority=4) 
+
+	@Test(priority = 4)
 	@Parameters("env")
 	public void testAddNewFamilyMember(String env) {
 		logger.info("Starting login test in environment: " + env);
-		test = extent.createTest("Verify user should be able to add a New Family Member ").assignCategory("Create");		
+		test = extent.createTest("Verify user should be able to add a New Family Member ").assignCategory("Create");
 		loginPage = new LoginPage(driver);
 		String username = ConfigReader.get("userName");
 		String password = ConfigReader.get("password");
 		loginPage.login(username, password);
-		homePage=new HomePage(driver);	
+		homePage = new HomePage(driver);
 		homePage.clickAddNewFamilyMemberButton();
 		addNewFamilyMemberPage = new AddNewFamilyMemberPage(driver);
-		addNewFamilyMemberPage.addNewFamilyMember("RandomName", "91", "RandomMobile", ConfigReader.get("beneficiaryName"));
+		addNewFamilyMemberPage.addNewFamilyMember("RandomName", "91", "RandomMobile",
+				ConfigReader.get("beneficiaryName"));
 		homePage.isFamilyMemberAddedSuccessMessageDisplayed();
-		}
+		homePage.clickSignOutButton();
+	}
 }

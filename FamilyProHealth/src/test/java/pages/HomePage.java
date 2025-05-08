@@ -89,4 +89,15 @@ public class HomePage extends BaseTest {
             test.fail("Family Member added success message is not displayed : " + e.getMessage());
         }
     }	
+	
+	public void clickSignOutButton() {
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(signOutButton)).click();
+            logger.info("User Signed Out Successfully");
+            test.pass("User Signed Out Successfully");
+        } catch (Exception e) {
+            logger.error("User not able to Signed Out : ", e);
+            test.fail("User not able to Signed Out: " + e.getMessage());
+        }
+    }	
 }
